@@ -5,28 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article Hub</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Article Hub</h1>
         <p>Share and read articles from the community</p>
     </header>
-    <main>
-        <section id="article-form">
-            <h2>Post an Article</h2>
-            <form id="new-article-form">
-                <input type="text" id="title" placeholder="Article Title" required>
-                <textarea id="content" placeholder="Write your article here..." required></textarea>
-                <button type="submit">Post Article</button>
-            </form>
-        </section>
-        <section id="articles">
-            <h2>Articles</h2>
-            <div id="article-list">
-                <!-- Articles will be dynamically added here -->
-            </div>
-        </section>
-    </main>
+    <div class="container">
+        <aside>
+            <h2>Article Types</h2>
+            <ul>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#health">Health</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#lifestyle">Lifestyle</a></li>
+                <li><a href="#business">Business</a></li>
+            </ul>
+        </aside>
+        <main>
+            <section id="article-form">
+                <h2>Post an Article</h2>
+                <form id="new-article-form">
+                    <input type="text" id="title" placeholder="Article Title" required>
+                    <textarea id="content" placeholder="Write your article here..." required></textarea>
+                    <button type="submit">Post Article</button>
+                </form>
+            </section>
+            <section id="articles">
+                <h2>Articles</h2>
+                <div id="article-list">
+                    <!-- Articles will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+    </div>
     <footer>
         <p>&copy; 2025 Article Hub. All rights reserved.</p>
     </footer>
