@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("new-article-form");
     const articleList = document.getElementById("article-list");
 
+    // Load saved articles from localStorage
+    const savedArticles = JSON.parse(localStorage.getItem("articles")) || [];
+    savedArticles.forEach(article => addArticleToDOM(article.title, article.content));
+
+    // Handle form submission
     form.addEventListener("submit", (event) => {
         event.preventDefault();
 
@@ -9,7 +14,20 @@ document.addEventListener("DOMContentLoaded", () => {
         const title = document.getElementById("title").value;
         const content = document.getElementById("content").value;
 
-        // Create a new article element
+        // Save the article to localStorage
+        const article = { title, content };
+        savedArticles.push(article);
+        localStorage.setItem("articles", JSON.stringify(savedArticles));
+
+        // Add the article to the DOM
+        addArticleToDOM(title, content);
+
+        // Clear the form
+        form.reset();
+    });
+
+    // Function to add an article to the DOM
+    function addArticleToDOM(title, content) {
         const article = document.createElement("div");
         article.classList.add("article");
 
@@ -19,14 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const articleContent = document.createElement("p");
         articleContent.textContent = content;
 
-        // Append the title and content to the article
         article.appendChild(articleTitle);
         article.appendChild(articleContent);
-
-        // Add the article to the article list
         articleList.appendChild(article);
-
-        // Clear the form
-        form.reset();
-    });
+    }
 });
