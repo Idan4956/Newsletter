@@ -16,52 +16,22 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-    display: flex;
-    max-width: 1200px;
-    margin: 2rem auto;
-    gap: 2rem;
-    padding: 0 1rem;
-}
-
-aside {
-    flex: 1;
-    background: #ffffff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-aside h2 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: #202124;
-}
-
-aside ul {
-    list-style: none;
-    padding: 0;
+header h1 {
+    font-size: 2rem;
     margin: 0;
-}
-
-aside ul li {
-    margin: 0.5rem 0;
-}
-
-aside ul li a {
-    text-decoration: none;
-    color: #4285f4;
     font-weight: 500;
-    transition: color 0.2s ease-in-out;
 }
 
-aside ul li a:hover {
-    color: #357ae8;
+header p {
+    font-size: 1rem;
+    margin: 0.5rem 0 0;
+    color: #5f6368;
 }
 
-main {
-    flex: 3;
-    padding: 2rem;
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -112,6 +82,13 @@ button {
 
 button:hover {
     background-color: #357ae8;
+}
+
+#status-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
 }
 
 #article-list {
